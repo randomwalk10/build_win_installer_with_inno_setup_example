@@ -7,7 +7,7 @@
 AppName=MScan
 AppId=MScan
 AppCopyright=Copyright (C) 2019 MedStone BioTech. All Rights Reserved.
-AppVersion=0.4
+AppVersion=1.0
 AppPublisher=MedStone BioTech
 WizardStyle=modern
 DefaultDirName={autopf}\MedStone\MScan
