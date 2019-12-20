@@ -1,13 +1,13 @@
-; -- Example1.iss --
-; Demonstrates copying 3 files and creating an icon.
+; -- build_installer.iss --
+; Demonstrates how to build an installer for medstone_mscan
 
-; SEE THE DOCUMENTATION FOR DETAILS ON CREATING .ISS SCRIPT FILES!
+; compile this file with Inno Setup 6.0.3
 
 [Setup]
 AppName=MScan
 AppId=MScan
 AppCopyright=Copyright (C) 2019 MedStone BioTech. All Rights Reserved.
-AppVersion=0.1
+AppVersion=0.4
 AppPublisher=MedStone BioTech
 WizardStyle=modern
 DefaultDirName={autopf}\MedStone\MScan
@@ -19,6 +19,7 @@ OutputDir=userdocs:Inno Setup Examples Output
 OutputBaseFilename=MScan_Installer
 ArchitecturesAllowed=x64
 ArchitecturesInstallIn64BitMode=x64
+UsePreviousAppDir=yes
 
 [Files]
 Source: ".\medstone_mscan\*"; DestDir: "{app}"; Excludes: ".\medstone\medstone_mscan.lic"; Flags: ignoreversion recursesubdirs
@@ -35,6 +36,10 @@ Name: "{app}\driver"; Permissions: users-full
 Name: "{group}\MScan"; Filename: "{app}\medstone_mscan.exe"
 Name: "{group}\RemoveMscan"; Filename: "{uninstallexe}"
 Name: "{autodesktop}\MScan"; Filename: "{app}\medstone_mscan.exe"
+
+[Languages]
+Name: "chs"; MessagesFile: "compiler:Languages\ChineseSimplified.isl"
+; Name: "eng"; MessagesFile: "compiler:default.isl"
 
 [Run]
 Filename: "{sys}\pnputil.exe"; Parameters: "/add-driver ""{app}\driver\*.inf"" /install"; Flags: 64bit runhidden
