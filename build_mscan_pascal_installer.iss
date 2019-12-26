@@ -16,13 +16,15 @@ UninstallDisplayIcon={app}\medstone_mscan.exe
 Compression=lzma2
 SolidCompression=yes
 OutputDir=userdocs:Inno Setup Examples Output
-OutputBaseFilename=MScan_Installer
+OutputBaseFilename=MScan_Installer_V1.0_Pascal
+; OutputBaseFilename=MScan_Installer_V1.0_Turing
 ArchitecturesAllowed=x64
 ArchitecturesInstallIn64BitMode=x64
 UsePreviousAppDir=yes
 
 [Files]
-Source: ".\medstone_mscan\*"; DestDir: "{app}"; Excludes: ".\medstone\medstone_mscan.lic"; Flags: ignoreversion recursesubdirs
+Source: ".\medstone_mscan_pascal\*"; DestDir: "{app}"; Excludes: ".\medstone_mscan_pascal\medstone_mscan.lic"; Flags: ignoreversion recursesubdirs
+; Source: ".\medstone_mscan_turing\*"; DestDir: "{app}"; Excludes: ".\medstone_mscan_turing\medstone_mscan.lic"; Flags: ignoreversion recursesubdirs
 Source: ".\driver\*"; DestDir: "{app}\driver\"; Flags: ignoreversion recursesubdirs
 ; Source: ".\app_files\Readme.txt"; DestDir: "{app}"; Flags: isreadme
 
