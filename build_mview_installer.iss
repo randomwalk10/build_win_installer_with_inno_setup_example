@@ -7,7 +7,7 @@
 AppName=MView
 AppId=MView
 AppCopyright=Copyright (C) 2019 MedStone BioTech. All Rights Reserved.
-AppVersion=1.0
+AppVersion=1.1
 AppPublisher=MedStone BioTech
 WizardStyle=modern
 DefaultDirName={autopf}\MedStone\MView
@@ -16,7 +16,7 @@ UninstallDisplayIcon={app}\medstone_mview.exe
 Compression=lzma2
 SolidCompression=yes
 OutputDir=userdocs:Inno Setup Examples Output
-OutputBaseFilename=MView_Installer_V1.0
+OutputBaseFilename=MView_Installer_V1.1
 ArchitecturesAllowed=x64
 ArchitecturesInstallIn64BitMode=x64
 UsePreviousAppDir=yes
